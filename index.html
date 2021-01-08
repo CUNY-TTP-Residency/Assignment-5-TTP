@@ -1,18 +1,32 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="styles.css">
-        <script type="text/javascript" src="main.js"></script>
-    </head>
-    <body>
-        <button onclick=addRow()>Add Row</button>
-        <button onclick=addColumn()>Add Column</button>
-        <button onclick=removeRow()>Remove Row</button>
-        <button onclick=removeColumn()>Remove Column</button>
-        <div id="container">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="code.js"></script>
+</head>
+<body>
+        <button onclick="addRow()">Add Row</button>
+        <button onclick="addColumn()">Add Column</button>
+        <button onclick="removeRow()">Remove Row</button>
+        <button onclick="removeColumn()">Remove Column</button>
+        
+        <div class="dropdown">
+            <button class="dropbtn">Dropdown</button>
+            <div class="dropdown-content">
+                <button onclick="ChangeRed()">Red</button>
+                <button onclick="ChangeBlue()">Blue</button>
+                <button onclick="ChangeGreen()">Green</button>
+            </div>
+          </div>
+        
+          <div id="container">
             <div class="row">
                 <div class="column"></div>
             </div>
         </div>
-    </body>
+        
+</body>
 </html>

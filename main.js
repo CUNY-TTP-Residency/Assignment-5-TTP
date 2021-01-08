@@ -1,4 +1,5 @@
 let nodeCount = 0;
+let selctedcolor = 'white';
 
 function addColumn(){ // Create a node in the column.
     let col = document.getElementsByClassName("column");
@@ -19,6 +20,16 @@ function addRow(){  // Creates a column, poupulates it with the number of nodes 
         col.appendChild(createNode());
 
     row.appendChild(col);
+    function changeRed(){
+let value = document.getElementById().style.color='red';
+    }
+    
+    function changeBlue(){
+        let value = document.getElementById().style.color='Blue';
+            }
+            function changeGreen(){
+                let value = document.getElementById().style.color='Green';
+                    }
 }
 
 function createNode(){ // Creates a square
