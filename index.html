@@ -13,15 +13,18 @@
         <button onclick="removeColumn()">Remove Column</button>
         
         <div class="dropdown">
-            <button class="dropbtn">Dropdown</button>
+            <button class="dropbtn">Select A Color</button>
             <div class="dropdown-content">
                 <button id="red" onclick="changeColor(this.id)">Red</button>
                 <button id="blue" onclick="changeColor(this.id)">Blue</button>
                 <button id="green" onclick="changeColor(this.id)">Green</button>
             </div>
-          </div>
+        </div>
         
-          <div id="container">
+        <button onclick="fillEvery()">Fill Every</button>
+        <button onclick="fillUncolored()">Fill Uncolored</button>
+
+        <div id="container">
             <div class="row">
                 <div class="column"></div>
             </div>
