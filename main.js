@@ -1,5 +1,6 @@
 let nodeCount = 0;
 let selectedColor = "";
+let mouseDown = false;
 
 function addColumn(){ // Create a node in the column.
     let col = document.getElementsByClassName("column");
@@ -27,6 +28,9 @@ function createNode(){ // Creates a square
     node.setAttribute("id", "node");
     node.setAttribute("class", "node");
     node.style.backgroundColor = "white"
+    node.setAttribute("onmousedown", "onDown()");
+    node.setAttribute("onmouseup", "onUp()");
+    node.setAttribute("onmouseover", "onHover()");
     return node;
 }
 
@@ -47,11 +51,6 @@ function changeColor(id){
     document.getElementsByClassName("dropbtn")[0].style.color = selectedColor;
 }
 
-function selectNode(event){
-    if(event.target.id === "node")
-        event.target.style.backgroundColor = selectedColor;
-}
-
 function fillEvery(){
     let list = document.getElementsByClassName("node");
     for(let i = 0; i < list.length; i++)
@@ -64,4 +63,24 @@ function fillUncolored(){
         if(list[i].style.backgroundColor == 'white')
             list[i].style.backgroundColor = selectedColor;
     }
+}
+
+function clearAll(){
+    let list = document.getElementsByClassName("node");
+    for(let i = 0; i < list.length; i++)
+        list[i].style.backgroundColor = "white";
+}
+
+function onDown(){
+    mouseDown = true;
+    event.target.style.backgroundColor = selectedColor;
+}
+
+function onUp(){
+    mouseDown = false;
+}
+
+function onHover(){
+    if(mouseDown)
+        event.target.style.backgroundColor = selectedColor;
 }
