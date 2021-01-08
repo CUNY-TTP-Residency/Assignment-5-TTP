@@ -1,5 +1,5 @@
 let nodeCount = 0;
-let selctedcolor = 'white';
+let selectedColor = "";
 
 function addColumn(){ // Create a node in the column.
     let col = document.getElementsByClassName("column");
@@ -20,16 +20,6 @@ function addRow(){  // Creates a column, poupulates it with the number of nodes 
         col.appendChild(createNode());
 
     row.appendChild(col);
-    function changeRed(){
-let value = document.getElementById().style.color='red';
-    }
-    
-    function changeBlue(){
-        let value = document.getElementById().style.color='Blue';
-            }
-            function changeGreen(){
-                let value = document.getElementById().style.color='Green';
-                    }
 }
 
 function createNode(){ // Creates a square
@@ -48,4 +38,9 @@ function removeColumn(){ // Each column is a div with node children representing
     for(let i = 0; i < columns.length; i++)
         columns[i].removeChild(columns[i].childNodes[0]);
     nodeCount--;
+}
+
+function changeColor(id){
+    selectedColor = (id === "red" ? "red" : (id === "green" ? "green" : "blue"));
+    document.getElementsByClassName("dropbtn")[0].style.color = selectedColor;
 }
