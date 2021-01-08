@@ -44,3 +44,8 @@ function changeColor(id){
     selectedColor = (id === "red" ? "red" : (id === "green" ? "green" : "blue"));
     document.getElementsByClassName("dropbtn")[0].style.color = selectedColor;
 }
+
+function selectNode(event){
+    if(event.target.id === "node")
+        event.target.style.backgroundColor = selectedColor;
+}
