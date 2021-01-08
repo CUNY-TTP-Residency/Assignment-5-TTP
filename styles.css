@@ -27,7 +27,7 @@ body{
     flex-direction: row;
 }
 
-#node{
+.node{
     position: relative;
     border: 1px solid black;
     height: 3vh;

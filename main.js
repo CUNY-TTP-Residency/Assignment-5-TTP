@@ -25,6 +25,8 @@ function addRow(){  // Creates a column, poupulates it with the number of nodes 
 function createNode(){ // Creates a square
     let node = document.createElement("div")
     node.setAttribute("id", "node");
+    node.setAttribute("class", "node");
+    node.style.backgroundColor = "white"
     return node;
 }
 
@@ -48,4 +50,18 @@ function changeColor(id){
 function selectNode(event){
     if(event.target.id === "node")
         event.target.style.backgroundColor = selectedColor;
+}
+
+function fillEvery(){
+    let list = document.getElementsByClassName("node");
+    for(let i = 0; i < list.length; i++)
+        list[i].style.backgroundColor = selectedColor;
+}
+
+function fillUncolored(){
+    let list = document.getElementsByClassName("node");
+    for(let i = 0; i < list.length; i++){
+        if(list[i].style.backgroundColor == 'white')
+            list[i].style.backgroundColor = selectedColor;
+    }
 }
