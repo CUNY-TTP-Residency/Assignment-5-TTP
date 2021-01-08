@@ -1,4 +1,5 @@
 let nodeCount = 0;
+let selectedColor = "";
 
 function addColumn(){ // Create a node in the column.
     let col = document.getElementsByClassName("column");
@@ -37,4 +38,9 @@ function removeColumn(){ // Each column is a div with node children representing
     for(let i = 0; i < columns.length; i++)
         columns[i].removeChild(columns[i].childNodes[0]);
     nodeCount--;
+}
+
+function changeColor(id){
+    selectedColor = (id === "red" ? "red" : (id === "green" ? "green" : "blue"));
+    document.getElementsByClassName("dropbtn")[0].style.color = selectedColor;
 }
